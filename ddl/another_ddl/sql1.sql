@@ -5,6 +5,8 @@ CREATE TABLE IF NOT EXISTS test_table
     device_os      String,
     dt             Date
 )
+
+
     ENGINE = MergeTree
         PARTITION BY toYYYYMMDD(dt)
         ORDER BY name;
